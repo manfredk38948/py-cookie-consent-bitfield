@@ -1,0 +1,14 @@
+[project]
+name = "py-cookie-consent-bitfield"
+version = "0.1.0"
+description = "Encode and decode IAB TCF v2 core consent strings as structured Python objects."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
