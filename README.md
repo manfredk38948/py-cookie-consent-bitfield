@@ -65,3 +65,10 @@ encoding can represent without ambiguity.  Mixed-case tags such as
 - ``ConsentError`` - raised for malformed input or out-of-range fields.
 
 All timestamps are deciseconds since the Unix epoch, stored as integers.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
